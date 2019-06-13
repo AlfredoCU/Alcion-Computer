@@ -1,0 +1,352 @@
+/* ---------------------- Import ---------------------- */
+@import url(pages.css);
+
+/* ---------------------- Estilos Genericos ---------------------- */
+* {
+  box-sizing: border-box;
+}
+
+/* Imagenes */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Cuerpo del sitio */
+body {
+  font-family: 'Open Sans','Roboto', arial, sans-serif;
+}
+
+/* Titulos */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Yanone Kaffeesatz', 'Roboto', arial;
+  letter-spacing: 1.5px;
+}
+
+/* Titulo de Section */
+.section-titulo {
+  text-align: center;
+  font-size: 40px;
+  color: #0081EB;
+}
+
+/* Contenedor Principal */
+.contenedor {
+  margin: auto;
+}
+
+/* ---------------------- Header ---------------------- */
+.header {
+  height: 60px;
+}
+
+/* Contenedor que esta en el header */
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Logo y titulo */
+.logo, .fa-bars {
+  margin: 5px;
+  color: #FFFFFF;
+}
+
+/* Modificando el icon */
+.fa-bars {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #2792E8;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Tamaño de menu */
+.nav {
+  position: absolute;
+  top:  60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+/* Editado el menu */
+.menu {
+  font-weight: bold;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links de menu */
+.menu-link {
+  display: block;
+  padding: 20px;
+  background: #2792E8;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* Acción de dar clic en un link */
+.menu-link:hover, .select {
+  background: white;
+  color: #2792E8;
+}
+
+/* Esta clase esta ligada al script para mostrar el menu */
+.mostrar {
+  left: 0;
+}
+
+/* ---------------------- Barner ---------------------- */
+.banner {
+  margin-top: -60px;
+  position: relative;
+  /* Esto es para no tapar los elementos con la imagen */
+  z-index: -1000;
+}
+
+/* IMPORTANTE */
+.banner .contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* El parrafo no es visible para movil */
+.banner-parafo {
+  display: none;
+}
+
+/* ---------------------- Información ---------------------- */
+.info-columna {
+  background: #2792E8;
+  color: #FFFFFF;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.info-titulo {
+  font-size: 30px;
+}
+
+.info-parafo {
+  text-align: justify;
+}
+
+/* ---------------------- Servicios ---------------------- */
+.serv-columna {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* IMPORTANTE */
+.serv-descripcion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+}
+
+/* Titulos */
+.serv-titulo {
+  font-size: 25px;
+  margin:  5px, 0;
+}
+
+/* Parafos */
+.serv-parafo {
+  font-size: 12px;
+}
+
+/* Links */
+.link {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0081EB;
+}
+
+/* Icono de Link */
+.mas [class^="fas"] {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #0081EB;
+}
+
+/* ---------------------- Footer ---------------------- */
+.footer {
+  background: #333333;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Pie de página */
+.footer .social [class^="fab"] {
+  display: inline-block;
+  color: #333333;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* ---------------------- Estilos Responsive ---------------------- */
+@media(min-width:320px) {
+  .serv-parafo {
+    font-size: 14px;
+  }
+}
+
+/* Parafos de Información y Servicios */
+@media(min-width:428px) {
+  .serv-parafo {
+    font-size: 16px;
+  }
+  .info-parafo {
+    font-size: 20px;
+  }
+}
+
+/* Parafos de Servicios */
+@media(min-width:528px) {
+  .serv-parafo {
+    font-size: 20px;
+  }
+}
+
+/* Smartphone */
+@media(min-width:712px) {
+  .logo {
+    font-size: 40px;
+  }
+  .banner-titulo {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  .banner-parafo {
+    display: block;
+    font-size: 18px;
+    margin: 7px 0;
+  }
+  .info, .serv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -90px;
+  }
+  .info-columna {
+    width: 32%;
+  }
+  .info-titulo {
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  .section-titulo {
+    width: 100%;
+  }
+  .serv {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .serv-columna {
+    width: 49%;
+  }
+  .footer .social [class^="fab"] {
+    margin: 0 10px;
+  }
+  .serv-parafo {
+    font-size: 16px;
+  }
+}
+
+/* Tablets */
+@media(min-width:1024px) {
+  .contenedor {
+    width: 1000px;
+  }
+  .section-titulo {
+    font-size: 50px;
+    margin: 30px 0;
+  }
+  .nav {
+    position: static;
+    width: auto;
+  }
+  .menu {
+    display: flex;
+  }
+  .fa-bars {
+    display: none;
+  }
+  .menu-link {
+    background: none;
+    font-size: 20px;
+  }
+  .select {
+    color: #fff;
+    background: #2792E8;
+  }
+  .banner-titulo {
+    font-size: 60px;
+  }
+  .banner-parafo {
+    font-size: 25px;
+  }
+  .info {
+    margin-top: -120px;
+  }
+  .info-columna {
+    padding: 30px;
+  }
+  .info-titulo {
+    font-size: 35px;
+    text-align: center;
+  }
+  .serv-descripcion {
+    padding: 20px;
+  }
+  .serv-titulo {
+    font-size: 35px;
+  }
+  .serv-parafo {
+    font-size: 20px;
+  }
+}
+
+/* Laptops o PC */
+@media(min-width:1280px) {
+  .contenedor {
+    width: 1200px;
+  }
+  .logo {
+    font-size: 60px;
+  }
+  .banner .contenedor {
+    top: 40%;
+  }
+  .info {
+    margin-top: -220px;
+  }
+}
